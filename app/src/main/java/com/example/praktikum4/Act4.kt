@@ -62,3 +62,19 @@ fun FormDataDiri(modifier: Modifier){
                 ), verticalAlignment = Alignment.CenterVertically) {
                     RadioButton(
                         selected = textJK == item,
+                        onClick = {
+                            textJK = item
+                        })
+                    Text(item)
+                }
+            }
+        }
+        OutlinedTextField(
+            value = textAlamat,
+            singleLine = true,
+            modifier = Modifier.width(250.dp),
+            label = { Text("Alamat") },
+            onValueChange = {
+                textAlamat = it
+            }
+        )
